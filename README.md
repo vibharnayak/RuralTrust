@@ -4,8 +4,6 @@
  
 *Every Skill Deserves an Opportunity. Every Worker Deserves Trust.*
  
-**Hackathon Problem Statement 8.2** · Theme: Rural Employment, Accessibility, Artificial Intelligence and Worker Protection · Status: Under Development
- 
 ---
  
 ## 📌 Problem Statement 
