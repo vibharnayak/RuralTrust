@@ -8,7 +8,7 @@
  
 ---
  
-## 📌 Problem Statement 8.2
+## 📌 Problem Statement 
  
 > **Rural youth cannot find work that fits, and small employers cannot find them.**
  
