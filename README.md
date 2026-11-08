@@ -1,8 +1,10 @@
-# RuralTrust
-
+e · MD
+# 🌾 RuralTrust
+ 
 ### AI-Powered Rural Employment Platform
  
 *Every Skill Deserves an Opportunity. Every Worker Deserves Trust.*
+ 
  
 ---
  
@@ -21,32 +23,34 @@ Job information in rural areas is scattered across WhatsApp groups, local agents
 | 🗣️ **Voice access** | Workers can register, search, listen to job details and apply using voice, alongside a simple text mode. |
 | 🪪 **Universal Skill Passport** | A digital skill profile for people who may not have a formal CV. |
 | 🤖 **AI job matching** | Recommends jobs by skills, location, salary, experience and availability. |
-| 🛡️ **Employer verification & risk screening** | Flags suspicious listings for admin review. |
-| 📋 **Job Reality Check** | Compares advertised vs agreed terms and keeps wage and complaint records. |
+| 🛡️ **Employer verification and risk screening** | Flags suspicious listings for admin review. |
+| 📋 **Job Reality Check** | Compares advertised and agreed terms and keeps wage and complaint records. |
 | 📈 **Retention intelligence** | Follow-ups at Day 7, 30, 60 and 90. |
  
 ---
  
 ## 🚦 Project Status
  
-> This section is honest by design. Please keep it updated as work progresses.
+This repository describes the **proposed design** of RuralTrust. Features are listed below with their current status so nothing is overstated.
  
 | Feature | Status |
 |---|---|
-| Worker, Employer and Admin portals | 🟡 In development |
-| Smart Mode (text-based search & apply) | 🟡 In development |
-| Voice-assisted mode (Kannada demo) | 🟡 In development |
+| Worker, Employer and Admin portals | 🔴 Planned |
+| Smart Mode (text-based search and apply) | 🔴 Planned |
+| Voice-assisted mode (Kannada demo) | 🔴 Planned |
 | Additional languages | 🔴 Planned |
-| Universal Skill Passport | 🟡 In development |
-| AI job matching | 🟡 In development |
-| Employer verification & risk screening | 🟡 In development |
-| Job Reality Check & worker protection | 🔴 Planned |
+| Universal Skill Passport | 🔴 Planned |
+| AI job matching | 🔴 Planned |
+| Employer verification and risk screening | 🔴 Planned |
+| Job Reality Check and worker protection | 🔴 Planned |
 | Employment retention follow-ups | 🔴 Planned |
 | Assisted Access Portal (service centres) | 🔴 Planned |
  
 **Legend:** 🟢 Implemented · 🟡 In development · 🔴 Planned
  
-> ⚠️ **Demo data notice:** All names, salaries, counts and charts in the demo and presentation are **sample data for illustration only**. They are not real users, employers or outcomes.
+> Update this table as each feature moves from planned to in development to implemented.
+ 
+> ⚠️ **Demo data notice:** Any names, salaries, counts and charts used in demos or presentations are **sample data for illustration only**. They are not real users, employers or outcomes.
  
 ---
  
@@ -59,29 +63,30 @@ Job information in rural areas is scattered across WhatsApp groups, local agents
 - Listen to job descriptions and salary details
 - Apply through guided voice assistance
 - Check application status
-**Kannada** is the demo language. Broader multilingual support is a development goal.
+**Kannada** is the planned demo language. Broader multilingual support is a development goal.
  
 ### 🪪 Universal Skill Passport
-Education and qualifications · work experience · practical and vocational skills · projects and training · self-declared skills with supporting evidence · skill assessment status.
+Education and qualifications, work experience, practical and vocational skills, projects and training, self-declared skills with supporting evidence, and skill assessment status.
  
 ### 🤖 AI-Powered Job Matching
 Worker Profile → AI Matching → Suitable Jobs → Apply
  
 Matching considers skills and qualifications, location and travel distance, salary expectations, experience, and availability and job requirements.
  
-### 🛡️ Employer Verification & Fraud Risk Detection
+### 🛡️ Employer Verification and Fraud Risk Detection
 - Employer identity and business detail submission
-- Verification status: **Verified / Pending Review / Flagged**
+- Verification status: **Verified**, **Pending Review** or **Flagged**
 - Duplicate or suspicious listing detection
 - Recruitment-fee warnings
 - Salary and job-description inconsistency checks
 - Admin review of flagged listings
 > **Important:** a risk flag means *"needs human review"*, **not** confirmed fraud.
  
-### 📋 Job Reality Check & Worker Protection
-Record and compare advertised vs agreed salary, working hours, location, employment conditions and terms, plus wage records, complaints and supporting evidence.
+### 📋 Job Reality Check and Worker Protection
+Record and compare advertised and agreed salary, working hours, location, employment conditions and terms, plus wage records, complaints and supporting evidence.
  
 ### 📈 Employment Retention Intelligence
+ 
 | Checkpoint | Purpose |
 |---|---|
 | Day 7 | Initial employment check |
@@ -106,14 +111,14 @@ Record and compare advertised vs agreed salary, working hours, location, employm
  
 ```mermaid
 flowchart LR
-    U["Worker / Employer / Admin"] --> F["React Frontend<br/>(Tailwind CSS)"]
-    F --> B["Node.js Backend<br/>(Express.js, JWT + RBAC)"]
-    B --> D[("PostgreSQL")]
-    B --> A["Python AI Services<br/>(FastAPI)"]
-    A --> R["Results<br/>Matches · Risk flags · Skill insights"]
-    B -.-> V["Speech-to-text · Text-to-speech · Translation APIs"]
-    F -.-> M["OpenStreetMap"]
+    U["Worker, Employer, Admin"] --> F["React Frontend"]
+    F --> B["Node.js Backend"]
+    B --> D[("PostgreSQL Database")]
+    B --> A["Python AI Services"]
+    A --> R["Results"]
 ```
+ 
+**In words:** Workers, employers and admins use the React frontend. It calls the Node.js backend, which stores data in PostgreSQL and calls the Python AI services for job matching, skill extraction and risk screening. Results are returned to the user. Voice and language features use speech-to-text, text-to-speech and translation APIs, and maps use OpenStreetMap.
  
 ## 🛠️ Tech Stack (Proposed)
  
@@ -124,20 +129,30 @@ flowchart LR
 | Database | PostgreSQL |
 | AI services | Python, FastAPI |
 | AI capabilities | Job matching, skill extraction, risk screening |
-| Voice & language | Speech-to-text, text-to-speech, translation APIs |
+| Voice and language | Speech-to-text, text-to-speech, translation APIs |
 | Maps | OpenStreetMap |
 | Authentication | JWT, role-based access control (RBAC) |
  
 ---
  
-## 🚀 Getting Started
+## 🖼️ Screenshots
  
-> Replace the commands below with the ones that match your actual repository layout.
+Screenshots of the working prototype will be added here once the interface is ready.
+ 
+<!-- Add images like this once they exist in docs/screenshots/:
+![Worker dashboard](docs/screenshots/worker-dashboard.png)
+-->
+ 
+---
+ 
+## 🚀 Getting Started (Planned Setup)
+ 
+> **Note:** The commands below are the **planned** setup instructions. They will work once the code for each service is added to this repository. Adjust them to match the final folder layout.
  
 ### Prerequisites
-- Node.js 18+
-- Python 3.10+
-- PostgreSQL 14+
+- Node.js 18 or later
+- Python 3.10 or later
+- PostgreSQL 14 or later
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/vibharnayak/ruraltrust.git
@@ -145,7 +160,7 @@ cd ruraltrust
 ```
  
 ### 2. Configure environment variables
-Create a `.env` file in each service folder (never commit real secrets):
+Create a `.env` file in each service folder. Never commit real secrets.
  
 ```env
 # backend/.env
@@ -172,7 +187,7 @@ cd ai-services && pip install -r requirements.txt && uvicorn main:app --reload
  
 ---
  
-## 📁 Suggested Project Structure
+## 📁 Planned Project Structure
  
 ```
 ruraltrust/
@@ -180,7 +195,8 @@ ruraltrust/
 ├── backend/        # Node.js + Express API
 ├── ai-services/    # Python + FastAPI (matching, skill extraction, risk screening)
 ├── database/       # PostgreSQL schema and migrations
-├── docs/           # Presentation and diagrams
+├── docs/           # Presentation, diagrams and screenshots
+├── LICENSE
 └── README.md
 ```
  
@@ -189,23 +205,23 @@ ruraltrust/
 ## 🤝 Responsible Design Principles
  
 - **Human in the loop:** risk flags go to an admin for review; nothing is labelled fraud automatically.
-- **Transparency:** matching and flags should be explainable to workers and employers.
+- **Transparency:** matching results and flags should be explainable to workers and employers.
 - **Accessibility first:** voice and local-language support so digital literacy is not a barrier.
 - **Privacy:** collect only what is needed, protect worker and employer data, and keep secrets out of the repository.
 - **Honest reporting:** no invented statistics, partnerships or outcomes.
 ## 🗺️ Roadmap
  
-- [ ] Complete core Worker, Employer and Admin portals
+- [ ] Core Worker, Employer and Admin portals
 - [ ] Voice flow in Kannada (demo language)
 - [ ] Skill Passport and AI job matching
 - [ ] Employer verification and risk screening
-- [ ] Job Reality Check and wage/complaint records
-- [ ] Day 7 / 30 / 60 / 90 retention follow-ups
+- [ ] Job Reality Check with wage and complaint records
+- [ ] Day 7, 30, 60 and 90 retention follow-ups
 - [ ] Additional languages
 - [ ] Assisted Access Portal for service centres
 ## 📄 License
  
-Distributed under the MIT License. See `LICENSE` for details. *(Change this if you choose a different license.)*
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
  
 ---
  
