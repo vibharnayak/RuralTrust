@@ -1,4 +1,4 @@
-#RuralTrust
+# RuralTrust
  
 ### AI-Powered Rural Employment Platform
  
