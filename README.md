@@ -1,4 +1,3 @@
-e · MD
 # 🌾 RuralTrust
  
 ### AI-Powered Rural Employment Platform
